@@ -2,7 +2,7 @@ define(['app'],function(app){
 	return {
 		share: function(title,desc,fn){
 			document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-				var baseUrl = 'http://218.197.226.152/9/';
+				var baseUrl = 'http://urinx.github.io/app/to-do-list/';
 				var imgUrl=baseUrl+'img/thumb.png';
 				var appid='';
 				
