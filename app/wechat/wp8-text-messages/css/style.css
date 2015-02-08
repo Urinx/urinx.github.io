@@ -1,0 +1,146 @@
+body {
+  font-family: Lucida Sans Unicode, Arial;
+  font-size: 0.8em;
+  color: white;
+  /*background: transparent;*/
+  background: #232323;
+  display: flex;
+  margin: 0;}
+
+.phone {
+  margin: auto;
+  max-height: 680px;
+  min-height: 400px;
+  background: transparent;
+  border: 1px solid #099;
+  border-top: 25px solid #099;
+  border-bottom: 66px solid #099;
+  border-radius: 10px;
+  position: absolute;
+  left: 37%;
+  width: 400px;
+  top: 2px;
+  bottom: 2px;
+  margin-left: -150px;}
+
+.screen {
+  overflow: hidden;
+  position: absolute;
+  width: 92%;
+  margin: 0 4%;
+  top: 50px;
+  bottom: 10px;
+}
+
+.messages {
+  word-wrap: break-word;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.phone ul {
+  list-style: none;
+  padding: 0;}
+
+.phone .message {
+  width: 70%;
+  position: relative;
+  margin: 10px 0;
+  padding-bottom: 1.5em;}
+
+/* Message Triangles */
+.phone .message.status {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.2);
+  float: left;
+  width: 50%;
+  margin-left: 25%;
+  padding: 0;
+  text-align: center;
+  color: white;
+}
+
+.phone .message.recieved {
+  background: #0bb;
+  border-color: #0bb;
+  float: left;}
+
+.phone .message.sent {
+  background: #077;
+  border-color: #077;
+  float: right;}
+
+.phone .message:after {
+  content:"";
+  width: 0;
+  height: 0;
+  position: absolute;}
+
+.phone .message.recieved:after {
+  border-bottom: 10px solid #0bb;
+  border-right: 10px solid transparent;
+  top: -10px;
+  left: 10px;}
+
+.phone .message.sent:after {
+  border-top: 10px solid #077;
+  border-left: 10px solid transparent;
+  bottom: -10px;
+  right: 10px;}
+/* End of Message Triangles*/
+
+/* Message Contents*/
+.phone .message p {
+  margin: 0;
+  padding: 6px}
+
+.phone .message p a{
+  color: white;
+}
+
+.phone .message time {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 6px;
+  font-size: 0.8em;
+  color: #aee;}
+/* End of Message Contents*/
+
+/* Text Area*/
+.phone .message.input {
+  background: #fff;
+  /*background: transparent;*/
+  float: right;
+  padding-bottom: 0;
+  height: 5em;}
+
+.phone .message.input:after {
+  border-top: 10px solid #fff;
+  border-left: 10px solid transparent;
+  bottom: -10px;
+  right: 10px;}
+
+.phone textarea {
+  /*background: transparent;*/
+  border: 0;
+  width: 98%;
+  height: 70%;
+  outline: none;
+  resize: none;
+  font-family: Lucida Sans Unicode, Arial;
+  margin: 0 auto;
+}
+/* End of Text Area*/
+
+.phone .send_button{
+  position: absolute;
+  left: 50%;
+  bottom: -66px;
+  width: 60px;
+  height: 60px;
+  border: solid 2px white;
+  border-radius: 50%;
+  margin-left: -30px;
+}

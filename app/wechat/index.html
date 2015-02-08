@@ -1,0 +1,50 @@
+<style type="text/css">
+	/*
+		好看的颜色
+		#57CADD
+		#FFAB52
+		#2AB8AC
+	 */
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		background: url(bg.webp);
+		display: flex;
+	}
+	#phone{
+		margin: auto;
+		width: 411px;
+		height: 797px;
+		background: url(phone.png) no-repeat center center;
+		display: flex;
+	}
+	#phone iframe{
+		width: 364px;
+		height: 640px;
+		border: 0;
+		border-radius: 5px;
+		margin: auto;
+	}
+	#wp-phone{
+		margin: auto;
+		width: 411px;
+		height: 797px;
+		display: flex;
+	}
+	#wp-phone iframe{
+		border: 0;
+		width: 100%;
+		height: 100%;
+		margin: auto;
+	}
+</style>
+
+<div id="phone">
+	<iframe name="musicPlayer" src="music-player/index.html"></iframe>
+</div>
+
+<div id="wp-phone">
+	<iframe name="wpPhone" src="wp8-text-messages/index.html"></iframe>
+</div>

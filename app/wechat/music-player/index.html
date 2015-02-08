@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>CodePen - Music Player</title>
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+
+<body>
+
+<!-- Looks best in Chrome for now. 
+Can't seem to style the progress bar on firefox properly yet. 
+Cick play to animate the progress bar.
+-->
+
+<div class="music-player">
+  <lyric class='album-image' width="300" height="300">
+    <div class='lyric'></div>
+  </lyric>
+  <div class="content">
+    <div class="track"><i class="icon-music"></i><track></track></div>
+    <div class="artist"><i class="icon-user"></i><artist></artist></div>
+    <div class="album"><i class="icon-cd"></i><album></slbum></div>
+    <ul class="controls">
+      <li><i class="icon-heart" ddata-tooltip="like"></i></li>
+      <li><i class="icon-shuffle" ddata-tooltip="shuffle"></i></li>
+      <li><i class="icon-cw" ddata-tooltip="repeat"></i></li>
+    </ul> 
+    <progress value="0" max="100"><div class="tracker active"></div></progress>
+    <span class="cur-time">0:00</span><span></span>
+    <span class=""></span><span class="duration" style="float:right;">4:42</span>
+    <ul class="play-controls">
+      <li><i class="icon-first"></i></li>
+      <li><i class="icon-previous"></i></li>
+      <li><i class="icon-play"></i></li>
+      <li><i class="icon-next"></i></li>
+      <li><i class="icon-last"></i></li>
+    </ul>
+  </div>
+  <audio></audio>
+</div>
+
+<script src='js/jquery.min.js'></script>
+<script src="js/index.js"></script>
+
+</body>
+
+</html>
