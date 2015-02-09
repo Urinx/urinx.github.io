@@ -60,6 +60,12 @@ $(document).ready(function() {
 			$('ul.controls li i.icon-shuffle').click(function() {});
 			$('ul.controls li i.icon-cw').click(function() {});
 
+			$('.album-image').hover(function(){
+				$('.album-image-small.swing').removeClass('album-image-small swing').addClass('lyric');
+			},function(){
+				$('.lyric').removeClass('lyric').addClass('album-image-small swing');
+			});
+
 			// ---------------------Audio-------------------------
 			self.au.addEventListener('loadedmetadata', function(){
 				// 成功获取资源长度
@@ -72,6 +78,7 @@ $(document).ready(function() {
 
 			self.au.addEventListener('canplaythrough', function(){
 				// 可以播放，歌曲全部加载完毕
+				self.play(0);
 			});
 
 			self.au.addEventListener('play', function(){
@@ -105,6 +112,7 @@ $(document).ready(function() {
 			self.au.addEventListener('ended', function(){
 				self.$progress.val(self.$progress.attr('max'));
 				$('i.icon-play').removeClass('icon-play').addClass('icon-replay');
+				self.next();
 			});
 		},
 		_initMusic: function(){
@@ -113,13 +121,15 @@ $(document).ready(function() {
 			this._goto(0);
 		},
 		_setMusic: function(music, i){
-			//document.querySelector('img.album-image').src = music.img;
+			document.querySelector('lyric.album-image').style.backgroundImage = 'url('+music.img+')';
+			document.querySelector('.album-image-small').style.background = 'url('+music.img+') no-repeat center center';
 			document.querySelector('track').textContent = music.track;
 			document.querySelector('artist').textContent = music.artist;
 			document.querySelector('album').textContent = music.album;
 			this.au.src = music.src;
 			this.curMusic = music;
 			this.curMusic.index = i;
+			this.lyric();
 		},
 		_goto: function(n){
 			var cur = this.curMusic.index || 0,
@@ -127,6 +137,29 @@ $(document).ready(function() {
 				i = ((cur+n)<0 ? l+cur+n:cur+n )%l,
 				music = this.musicList[i];
 			this._setMusic(music, i);
+		},
+		_conventLyricFormat: function(lyricStr){
+			// to do
+			return lyricStr;
+		},
+		lyric: function(){
+			var self = this,
+				music = self.curMusic;
+
+			if ( music.lyric!='' ) {
+				return music.lyric;
+			} else{
+				$.ajax({
+					url: music.lyricUrl,
+					type: "GET",
+					dataType: 'jsonp',
+					timeout: 5000,
+					contentType: "application/json;utf-8",
+					success: function (data) {
+						self.curMusic.lyric = self._conventLyricFormat(data.lyric);
+					}
+				});
+			}
 		},
 		play: function(n){
 			if (n==0) {

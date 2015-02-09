@@ -76,7 +76,6 @@ i {
   height: 130px;
   margin: auto;
   border-radius: 50%;
-  background: url(../res/130.jpg);
 }
 
 .music-player .lyric {
@@ -84,7 +83,6 @@ i {
   width: 250px;
   height: 250px;
   margin: auto;
-  background: url(../res/130.jpg);
 }
 
 .music-player .artist {
