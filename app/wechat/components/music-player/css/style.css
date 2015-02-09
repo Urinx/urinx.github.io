@@ -60,7 +60,7 @@ i {
   border-radius: 8px 8px 0 0;
   margin-top: -1px;
   transition: all 0.5s ease;
-  background: url(../img.webp) no-repeat center center;
+  background: url(../res/album_placehold.webp) no-repeat center center;
   background-size: 100% 100%;
 }
 
@@ -76,7 +76,7 @@ i {
   height: 130px;
   margin: auto;
   border-radius: 50%;
-  background: url(../mp3/130.jpg);
+  background: url(../res/130.jpg);
 }
 
 .music-player .lyric {
@@ -84,7 +84,7 @@ i {
   width: 250px;
   height: 250px;
   margin: auto;
-  background: url(../mp3/130.jpg);
+  background: url(../res/130.jpg);
 }
 
 .music-player .artist {
@@ -173,4 +173,38 @@ i[data-tooltip]:hover:after {
   border-radius:2px;
   background:white;
   box-shadow:-1px 5px 15px rgba(0,0,0,0.6);
+}
+
+.swing {
+  -webkit-animation: rotate 20s infinite linear;
+          animation: rotate 20s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }

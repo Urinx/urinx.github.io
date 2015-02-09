@@ -3,7 +3,6 @@
 
 <head>
 <meta charset="UTF-8">
-<title>CodePen - Music Player</title>
 <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 </head>
 
@@ -16,7 +15,7 @@ Cick play to animate the progress bar.
 
 <div class="music-player">
   <lyric class='album-image' width="300" height="300">
-    <div class='lyric'></div>
+    <div class='album-image-small'></div>
   </lyric>
   <div class="content">
     <div class="track"><i class="icon-music"></i><track></track></div>
@@ -41,7 +40,8 @@ Cick play to animate the progress bar.
   <audio></audio>
 </div>
 
-<script src='js/jquery.min.js'></script>
+<link rel="import" href="music-list.html">
+<script src='../../libs/jquery.min.js'></script>
 <script src="js/index.js"></script>
 
 </body>
