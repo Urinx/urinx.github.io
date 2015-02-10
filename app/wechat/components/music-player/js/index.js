@@ -61,9 +61,9 @@ $(document).ready(function() {
 			$('ul.controls li i.icon-cw').click(function() {});
 
 			$('.album-image').hover(function(){
-				$('.album-image-small.swing').removeClass('album-image-small swing').addClass('lyric');
+				self.showLyric();
 			},function(){
-				$('.lyric').removeClass('lyric').addClass('album-image-small swing');
+				self.hideLyric();
 			});
 
 			// ---------------------Audio-------------------------
@@ -94,11 +94,19 @@ $(document).ready(function() {
 
 				self.timer = setInterval(function(){
 					var t = parseInt(self.au.currentTime),
+						f = self.au.currentTime.toFixed(2),
+						i = self.curMusic.lyricIndex,
 						c = t%60,
-						s = c<10?'0'+c:c;
+						s = c<10?'0'+c:c,
+						timeAxis = Object.keys(self.curMusic.lyric).sort(function(a,b){return a-b}),
+						len = timeAxis.length;
 					curTime.textContent = parseInt(t/60)+':'+s;
 					progress.val(m*t/d);
-					// console.log(1);
+					if (len!=0) {
+						while( f - timeAxis[i] >=0 && i < len){ i++ }
+						self.curMusic.lyricIndex = i-1;
+					}
+					// console.log(i,timeAxis[i-1]);
 				}, ms);
 			});
 
@@ -129,6 +137,7 @@ $(document).ready(function() {
 			this.au.src = music.src;
 			this.curMusic = music;
 			this.curMusic.index = i;
+			this.curMusic.lyricIndex = 0;
 			this.lyric();
 		},
 		_goto: function(n){
@@ -139,8 +148,23 @@ $(document).ready(function() {
 			this._setMusic(music, i);
 		},
 		_conventLyricFormat: function(lyricStr){
-			// to do
-			return lyricStr;
+			var t = lyricStr.split(/\n+/g),
+				lyricArr = t.slice(0, t.length-1),
+				name = this.curMusic.track,
+				lyricObj = {0:name};
+			lyricArr.map(function(i){
+				// var a = /^(\[.*?\])([^\[\]]*)$/g.exec(i),
+				var a = /^(\[.*?\])(.*)$/g.exec(i),
+					b = a[1].replace(/\[/g,'').split(']'),
+					c = a[2];
+				b.pop();
+				b.map(function(j){
+					var d = j.split(':'),
+						e = (parseInt(d[0])*60+parseFloat(d[1])).toFixed(2);
+					lyricObj[e] = c;
+				});
+			});
+			return lyricObj;
 		},
 		lyric: function(){
 			var self = this,
@@ -160,6 +184,14 @@ $(document).ready(function() {
 					}
 				});
 			}
+		},
+		showLyric: function(){
+			$('.album-image-small.swing').removeClass('album-image-small swing').addClass('lyric');
+			// to do
+		},
+		hideLyric: function(){
+			$('.lyric').removeClass('lyric').addClass('album-image-small swing');
+			// to do
 		},
 		play: function(n){
 			if (n==0) {
