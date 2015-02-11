@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    var WeChat = function(ws_url){
-        this.ws = new WebSocket(ws_url);
+    var WeChat = function(){
+        this.ws = null;
         this.ds = window.localStorage;
         this.$input = $("textarea[name=inputMessage]");
         this.$screen = $(".messages ul");
@@ -9,7 +9,7 @@ $(document).ready(function() {
     WeChat.prototype = {
         init: function(){
             this.checkUser();
-            this.registerEvent();
+            this.setWS();
         },
         checkUser: function(){
             var ds = this.ds;
@@ -47,6 +47,10 @@ $(document).ready(function() {
                 self.online();
             };
 
+            self.ws.onclose = function(){
+                self.setWS();
+            };
+
             self.ws.onmessage = function(msg){
                 console.log(msg.data);
                 var i = msg.data.indexOf('{');
@@ -54,6 +58,10 @@ $(document).ready(function() {
                     var message = msg.data.slice(i);
                     self.recieve_message(JSON.parse(message));
                 }
+            };
+
+            self.ws.onerror = function(e){
+                console.log('WebSocket Error: '+e);
             };
 
             window.onbeforeunload = function(){
@@ -66,6 +74,20 @@ $(document).ready(function() {
                 self.ws.close();
             };
 
+        },
+        setWS: function(){
+            var self = this;
+            $.ajax({
+                url: 'http://urinx.sinaapp.com/new_ws',
+                type: "GET",
+                dataType: 'jsonp',
+                timeout: 5000,
+                contentType: "application/json;utf-8",
+                success: function (data) {
+                    self.ws = new WebSocket(data.ws);
+                    self.registerEvent();
+                }
+            });
         },
         send_message: function(){
             var message = this.$input.val().trim(),
@@ -139,6 +161,6 @@ $(document).ready(function() {
         },
     };
 
-    var wechat = new WeChat('ws://channel.sinaapp.com/com/kxYi_Gyus3OMLQNm0iCd5uCeiSNee9T9_KKcFNJC-T1SX58XcWWQxQq6t2KBNhS1BCRAnXOw5XMQb4Z-1V3N_w');
+    var wechat = new WeChat();
 
 });

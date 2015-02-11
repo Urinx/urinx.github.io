@@ -105,6 +105,14 @@ $(document).ready(function() {
 					if (len!=0) {
 						while( f - timeAxis[i] >=0 && i < len){ i++ }
 						self.curMusic.lyricIndex = i-1;
+						if(document.querySelector('.lyric')){
+							var tpl = [],
+								arr = timeAxis.slice(i-3,i+2);
+							arr.map(function(i){
+								tpl.push('<p>'+self.curMusic.lyric[i]+'</p>');
+							});
+							document.querySelector('.lyric').innerHTML=tpl.join('');
+						}
 					}
 					// console.log(i,timeAxis[i-1]);
 				}, ms);
@@ -150,8 +158,10 @@ $(document).ready(function() {
 		_conventLyricFormat: function(lyricStr){
 			var t = lyricStr.split(/\n+/g),
 				lyricArr = t.slice(0, t.length-1),
-				name = this.curMusic.track,
-				lyricObj = {0:name};
+				track = this.curMusic.track,
+				artist = this.curMusic.artist,
+				album = this.curMusic.album,
+				lyricObj = {'-2':track,'-1':artist,'0':album};
 			lyricArr.map(function(i){
 				// var a = /^(\[.*?\])([^\[\]]*)$/g.exec(i),
 				var a = /^(\[.*?\])(.*)$/g.exec(i),
@@ -187,11 +197,9 @@ $(document).ready(function() {
 		},
 		showLyric: function(){
 			$('.album-image-small.swing').removeClass('album-image-small swing').addClass('lyric');
-			// to do
 		},
 		hideLyric: function(){
-			$('.lyric').removeClass('lyric').addClass('album-image-small swing');
-			// to do
+			$('.lyric').removeClass('lyric').addClass('album-image-small swing').html('');
 		},
 		play: function(n){
 			if (n==0) {

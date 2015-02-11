@@ -85,6 +85,21 @@ i {
   margin: auto;
 }
 
+.lyric p {
+  display: block;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+  color: rgba(255,255,255,0.4);
+}
+
+.lyric p:nth-child(3) {
+  padding-top: 25px;
+  height: 90px;
+  color: rgba(255,255,255,1);
+  font-size: 15px;
+}
+
 .music-player .artist {
   font-weight: 400;
   font-size: 1.1em;
