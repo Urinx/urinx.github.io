@@ -1,4 +1,10 @@
 (function(){
+	function qrcode (url) {
+		url = url || location.href;
+		console.log("%c  ","background-image:url('http://www.liantu.com/api.php?bg=ffffff&fg=000000&gc=000000&el=L&text=" + encodeURIComponent(url) + "');background-size:contain;font-size:2500%;")
+	}
+	qrcode();
+	
 	window.addEventListener('load', function(){
 		var suppot_template = '\
 			<div id="phone">\
