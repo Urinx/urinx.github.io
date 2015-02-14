@@ -22,7 +22,7 @@
 			return 'import' in document.createElement('link') && 'content' in document.createElement('template') && 'registerElement' in document;
 		};
 		if (checkSupport()) {
-			document.querySelector('body').innerHTML = suppot_template;
+			// document.querySelector('body').innerHTML = suppot_template;
 		} else{
 			document.querySelector('body').innerHTML = not_suppot_template;
 		}
