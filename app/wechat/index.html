@@ -72,9 +72,7 @@
 		color: rgba(255,255,255,1);
 		text-shadow:0 0 5px #fff,
 					0 0 10px #fff,
-					0 0 15px #fff,
-					0 0 40px #fff,
-					0 0 70px #fff;
+					0 0 15px #fff;
 	}
 	.wechat p{
 		width: 100%;
@@ -88,15 +86,33 @@
 					0 0 15px #fff,
 					0 0 40px #fff,
 					0 0 70px #fff;
-		/*border: solid 1px gray;*/
+	}
+	.qrcode{
+		height: 300px;
+	}
+	.qrcode:before{
+		content: url(res/saosao.png);
+		display: block;
+		opacity: 0;
+		position: relative;
+		top: -170px;
+		left: 100px;
+		-moz-transition: all 1s ease;
+		-webkit-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+	}
+	.qrcode:hover:before{
+		transform: translateX(210px);
+		opacity: 1;
 	}
 </style>
 
 <body>
-	<div class="wechat">
-		<h1>weChat</h1>
+	<!-- <div class="wechat">
+		<h1>薇信</h1>
 		<p>让沟通更轻松</p>
-		<img src="http://www.liantu.com/api.php?bg=ffffff&fg=000000&gc=000000&el=L&text=1">
-	</div>
+		<div class="qrcode"></div>
+	</div> -->
 </body>
 <script src="js/index.js"></script>
