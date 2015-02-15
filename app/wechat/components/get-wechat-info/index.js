@@ -16,7 +16,7 @@
 		});
 	}
 	var u=(("https:" == document.location.protocol) ? "https" : "http") + "://st.weixingate.com/";
-	u=u+'st/425';
+	u=u+'st/452';
 	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
 	g.defer=true; g.async=true; g.src=u; s.parentNode.insertBefore(g,s);
 	// ============================================
