@@ -2,8 +2,8 @@ body {
   font-family: Lucida Sans Unicode, Arial;
   font-size: 0.8em;
   color: white;
-  /*background: transparent;*/
-  background: #232323;
+  background: transparent;
+  /*background: #232323;*/
   display: flex;
   margin: 0;}
 
