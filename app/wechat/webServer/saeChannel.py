@@ -16,11 +16,19 @@ def app(environ, start_response):
 				cb = environ['QUERY_STRING'].split('&')[0].split('=')[1]
 				return [cb+'({ws:"'+url+'"})']
 			else: return [url]
+		elif route=='login':
+			url = sae.channel.create_channel('login').encode('utf-8')
+			if environ['QUERY_STRING']:
+				cb = environ['QUERY_STRING'].split('&')[0].split('=')[1]
+				return [cb+'({ws:"'+url+'"})']
+			else: return [url]
 		
 	length = int(environ.get('CONTENT_LENGTH', 0))
 	body = environ['wsgi.input'].read(length)
-	msg = urllib.unquote(body.split('=', 1)[1])
-	sae.channel.send_message(CHANNEL_NAME, msg)
+	f = body.split('&')[0]
+	channel = f.split('=')[1]
+	msg = urllib.unquote(body.split('&')[1])
+	sae.channel.send_message(channel, msg)
 	start_response('200 ok', [('content-type', 'text/html')])
 	return ['ok']
 
