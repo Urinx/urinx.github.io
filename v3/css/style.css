@@ -1,0 +1,255 @@
+body {
+    font-family: 'Futura TGW','Futura-Medium',Futura,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.4em;
+    line-height: 1;
+    overflow: auto;
+    min-height: 100%;
+    margin: 0;
+    text-align: center;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -ms-overflow-style: none;
+}
+.content {
+    line-height: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+}
+.content img{
+    width: 100%;
+    height: 100%;
+}
+.panel {
+    line-height: 1;
+    position: fixed;
+    min-width: 100%;
+    height: 100%;
+    margin-top: 0;
+    -webkit-transition: opacity .6s ease-in-out;
+       -moz-transition: opacity .6s ease-in-out;
+        -ms-transition: opacity .6s ease-in-out;
+         -o-transition: opacity .6s ease-in-out;
+            transition: opacity .6s ease-in-out;
+    opacity: 0;
+}
+.panel:target {
+    z-index: 300;
+    margin-top: 0;
+    opacity: 1;
+}
+#home:target ~ #header #navigation #link-home,
+#portfolio:target ~ #header #navigation #link-portfolio,
+#about:target ~ #header #navigation #link-about,
+#contact:target ~ #header #navigation #link-contact {
+    color: #fff;
+    background: #000;
+}
+.overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1,1,1,.8);
+}
+.overlay .overlay-close {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.overlay .closeall {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.overlay nav {
+    position: relative;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: center;
+}
+.overlay ul {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    list-style: none;
+}
+.overlay ul li {
+    height: 19%;
+}
+.overlay ul li a {
+    font-weight: 300;
+    display: block;
+    -webkit-transition: color .3s;
+            transition: color .3s;
+    color: #fff;
+}
+.overlay ul li a:hover,.overlay ul li a:focus {
+    opacity: .75;
+}
+@media only screen and (max-width: 414px) {
+    .overlay nav {
+        font-size: 8vmax;
+        top: 58.5%;
+        height: 50%;
+        margin-left: 1vw;
+        letter-spacing: 1.4vmax;
+    }
+    .overlay ul li {
+        display: block;
+        height: 10vmax;
+    }
+}
+@media only screen and (min-width: 415px) and (max-width: 767px) {
+    .overlay nav {
+        font-size: 7vmax;
+        top: 55%;
+        height: 50%;
+        margin-left: 1vw;
+        letter-spacing: 1.4vmax;
+    }
+    .overlay ul li {
+        display: block;
+        height: 9vmax;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .overlay nav {
+        font-size: 5vmax;
+        top: 63%;
+        height: 50%;
+        margin-left: 1vw;
+        letter-spacing: 1.4vmax;
+    }
+    .overlay ul li {
+        display: block;
+        height: 7vmax;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .overlay nav {
+        font-size: 7.5vmin;
+        top: 60%;
+        height: 50%;
+        margin-left: 1vmin;
+        letter-spacing: 1.5vmin;
+    }
+    .overlay ul li {
+        display: block;
+        height: 10.5vmin;
+    }
+}
+.overlay-hugeinc {
+    z-index: 500;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-transition: opacity .3s,visibility 0 .3s;
+            transition: opacity .3s,visibility 0 .3s;
+    opacity: 0;
+}
+.overlay-hugeinc.open {
+    visibility: visible;
+    -webkit-transition: opacity .3s;
+            transition: opacity .3s;
+    opacity: 1;
+}
+.overlay-hugeinc nav {
+    -webkit-perspective: 1200px;
+            perspective: 1200px;
+}
+.overlay-hugeinc.open nav ul {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    opacity: 1;
+}
+:focus
+{
+    outline: 0;
+}
+@media only screen and (max-width: 414px) {
+    .buttons-container {
+        position: fixed;
+        z-index: 2000;
+        left: 50%;
+        margin-top: 2vw;
+        margin-left: -28px;
+    }
+}
+@media only screen and (min-width: 415px) and (max-width: 767px){
+    .buttons-container{
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .buttons-container{
+        position: fixed;
+        z-index: 2000;
+        top: 5.7vmin;
+        left: 50%;
+        margin-left: -28px;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .buttons-container{
+        position: fixed;
+        z-index: 2000;
+        right: 8vmin;
+        margin-top: 4.8vmin;
+    }
+}
+button{
+    z-index: 999;
+    border: none;
+    background: none;
+}
+button span{
+    display: block;
+}
+.grid-button{
+    padding: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+.grid-button .grid{
+    width: .5rem;
+    height: .5rem;
+    transition: .3s;
+    -webkit-transform: translate3d(0,0,0);
+       -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+    color: #fff;
+    background: #fff;
+}
+.grid-button.close .grid{
+    -webkit-transform: rotate3d(0,0,1,-45deg) scale3d(.8,.8,.8);
+            transform: rotate3d(0,0,1,-45deg) scale3d(.8,.8,.8);
+}
+.grid-button.rearrange .grid{
+    box-shadow: -.6rem -.6rem,0 -.6rem,.6rem -.6rem,-.6rem 0,.6rem 0,-.6rem .6rem,0 .6rem,.6rem .6rem;
+}
+.grid-button.rearrange.close .grid{
+    box-shadow: 0 -.5rem,0 -1rem,.5rem 0,-1rem 0,1rem 0,-.5rem 0,0 1rem,0 .5rem;
+}
+.grid-button.collapse .grid{
+    box-shadow: -.75rem 0,-.75rem .75rem,.75rem 0,.75rem -.75rem,0 -.75rem,-.75rem -.75rem,0 .75rem,.75rem .75rem;
+}
+.grid-button.collapse.close .grid{
+    box-shadow: -.6rem 0,0 0 transparent,.6rem 0,0 0 transparent,0 -.6rem,0 0 transparent,0 .6rem,0 0 transparent;
+}
+a{
+    text-decoration: none;
+
+    color: #000;
+    outline: none!important;
+}
+@font-face {
+    font-family: 'Futura TGW';
+    font-weight: lighter;
+    font-style: normal;
+    src: url(../fonts/futura_medium-webfont.eot);
+    src: url(../fonts/futura_medium-webfont-.eot#iefix) format('embedded-opentype'),url(../fonts/futura_medium-webfont.woff) format('woff'),url(../fonts/futura_medium-webfont.ttf) format('truetype');
+}

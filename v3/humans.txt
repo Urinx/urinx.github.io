@@ -1,0 +1,24 @@
+/* TEAM */
+
+	Only myself...
+
+/* THANKS */
+
+	...
+
+/* TECHNOLOGY COLOPHON */
+
+    HTML5, CSS3
+    Reset.css, jQuery, Modernizr, Skrollr, Vide, Navicon Transformicons
+		
+
+/* SITE */
+	Last update:2015/2/18
+	Language: English, Chinese
+	Doctype:HTML5
+	IDE: Sublime Text
+
+
+
+
+
