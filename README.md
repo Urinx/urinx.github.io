@@ -11,7 +11,7 @@ Homepage
 
 [Version 3](http://urinx.github.io/v3/)
 -----------
-好吧，第三版马上就要来了，这回要走苹果官网风格！
+![urinx](screenshot/v3.png)
 
 APP
 ===
@@ -23,3 +23,8 @@ APP
 [Personal Card](http://urinx.github.io/app/personal-card/)
 ------------
 ![personal-card](screenshot/personalcard.png)
+
+[WeChat](http://urinx.github.io/app/wechat/)
+------------
+![WeChat](screenshot/wechat_0.png)
+![WeChat](screenshot/wechat_1.png)
