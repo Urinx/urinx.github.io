@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Muzik.js | Urinx</title>
+	<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/kaleidoscope.css"> <!-- Swing loding style -->
+	<link rel="stylesheet" type="text/css" media="screen" href="../../libs/rainbow/themes/monokai.css"> <!-- Rainbow style -->
+	<script src="../../libs/ga.js"></script> <!-- Google analytics -->
+	<script src="../../libs/modernizr.js"></script> <!-- Modernizr -->
+	<script src="../../libs/rainbow/rainbow.min.js"></script> <!-- Rainbow code highlight -->
+	<script src="../../libs/rainbow/language/generic.js"></script>
+	<script src="../../libs/rainbow/language/html.js"></script>
+	<script src="../../libs/rainbow/language/javascript.js"></script>
+</head>
+<body>
+	<section class="cd-section">
+		<div class="cd-block">
+			<h1>Muzik.js</h1>
+			<div class='Kaleidoscope'>
+				<div>
+					<div>
+						<div>
+							<div>
+								<div>
+									<div>
+										<div>
+											<div>
+												<div>
+													<div></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> <!-- .cd-section -->
+
+	<section class="cd-section">
+		<div class="cd-block">
+			<div class="cd-half-block"></div>
+
+			<div class="cd-half-block">
+				<div>
+					<h2>Installation</h2>
+					<p>The fastest way to get started is to serve JavaScript from the Github (also you can download it):</p>
+<pre>
+<code data-language="html">
+<!-- The core Muzik library -->
+&lt;script src="http://raw.githubusercontent.com/Urinx/Muzik.js/master/muzik.js"&gt;&lt;/script&gt;
+<!-- Or the compress version -->
+&lt;script src="http://raw.githubusercontent.com/Urinx/Muzik.js/master/muzik.min.js"&gt;&lt;/script&gt;
+</code>
+</pre>
+				</div>
+			</div>
+		</div>
+	</section> <!-- .cd-section -->
+
+	<section class="cd-section">
+		<div class="cd-block">
+			<div class="cd-half-block">
+				<canvas id="canvas"></canvas>
+			</div>
+
+			<div class="cd-half-block">
+				<div>
+					<h2>Get started</h2>
+<pre>
+<code data-language="html">
+// Assume you have the following element
+&lt;canvas id="canvas" width="600" height="300"&gt;&lt;/canvas&gt;
+// It's very easy to use Muzik.js
+&lt;script&gt;
+  var M = new Muzik({
+    load: './demo.mp3',
+    canvas: '#canvas',
+    draw_conf: {
+       type: 'foldline',
+       color: '#fff',
+       lineWidth: 2,
+       k: 0.05,
+       n: 25,
+    },
+  });
+&lt;/script&gt;
+</code>
+</pre>
+				</div>
+			</div>
+		</div>
+	</section> <!-- .cd-section -->
+
+	<section class="cd-section">
+		<div class="cd-block">
+			<div class="cd-half-block"></div>
+
+			<div class="cd-half-block">
+				<div>
+					<h2>What's more</h2>
+					<p>Let's try to drag a music file into the left area and wait to see what will happen:</p>
+<pre>
+<code data-language="html">
+&lt;script&gt;
+	var M = new Muzik({
+		input: '#uploadedFile',
+		canvas: '#canvas',
+	});
+&lt;/script&gt;
+</code>
+</pre>
+					<a href="https://github.com/Urinx/Muzik.js" class="more">Learn more</a>
+				</div>
+			</div>
+		</div>
+	</section> <!-- .cd-section -->
+
+	<nav>
+		<ul class="cd-vertical-nav">
+			<li><a href="#0" class="cd-prev inactive">Next</a></li>
+			<li><a href="#0" class="cd-next">Prev</a></li>
+		</ul>
+	</nav> <!-- .cd-vertical-nav -->
+<script src="../../libs/jquery.min.js"></script> <!-- Resource jQuery -->
+<script src="js/muzik.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
