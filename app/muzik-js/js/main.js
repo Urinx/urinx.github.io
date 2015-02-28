@@ -2,14 +2,32 @@ jQuery(document).ready(function($){
 	//========================== my muzik.js demo =========================
 	var M = new Muzik({
         load: '../../music/think_of_ideal.mp3',
-        canvas: '#canvas',
-        draw_conf: {
+        canvas: ['#canvas0','#canvas1','#canvas2','#canvas3'],
+        draw_conf: [{
+			type: 'line',
+			color: '#fff',
+			lineWidth: 2,
+			k: 0.01,
+			n: 50,
+		},{
             type: 'foldline',
 			color: '#fff',
 			lineWidth: 2,
 			k: 0.05,
 			n: 25,
-        },
+        },{
+			type: 'histogram',
+			meterWidth: 10,
+			gap: 2,
+			capHeight: 2,
+			capStyle: '#fff',
+			grad: ['#fff','#fff'],
+		},{
+			type: 'pie',
+			color: '#fff',
+			lineWidth: 2,
+			gap: 5,
+		}],
     });
 	//=====================================================================
 	//change this value if you want to change the speed of the scale effect

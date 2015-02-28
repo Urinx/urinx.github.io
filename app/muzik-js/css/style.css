@@ -236,7 +236,15 @@ a.more{
   color: gray;
   float: right;
 }
-#canvas{
+#canvas0{
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 190px;
+  padding-top: 90px;
+  display: block;
+}
+#canvas1,#canvas2,#canvas3{
   width: 70%;
   height: 40%;
   position: absolute;
@@ -249,4 +257,7 @@ a.more{
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+}
+div.Kaleidoscope{
+  margin-top: 40px;
 }
