@@ -74,19 +74,19 @@ deploy:
 # =============================================================================
 
 # 多说帐号
-duoshuo_shortname: your-duoshuo-shortname
+duoshuo_shortname:
 
 # DISQUS 帐号 （如果已经设置 多说 帐号，此选项将被跳过）
-disqus_shortname: your-disqus-shortname
+disqus_shortname: urinx
 
 
 # 社交链接，将在侧栏中显示
 social:
   GitHub: http://github.com/urinx/
-  Twitter: your-twitter-url
-  Weibo: your-weibo-url
-  DouBan: your-douban-url
-  ZhiHu: your-zhihu-url
+  Twitter: http://twitter.com/eular_
+  Weibo: http://weibo.com/2879781785
+  DouBan: http://www.douban.com/people/Erys/
+  ZhiHu: http://www.zhihu.com/people/urinx
   # 等等
 
 
@@ -102,7 +102,7 @@ google_site_verification: VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0
 
 
 # Google 分析 ID
-google_analytics:
+google_analytics: UA-60071282-1
 
 
 # 百度统计 ID，此 ID 是百度统计提供脚本中 hm.js? 后面那串字符，非百度统计帐号
