@@ -64,5 +64,9 @@
   {% include '_scripts/comments/duoshuo.swig' %}
   {% include '_scripts/comments/disqus.swig' %}
   {% include '_scripts/analytics/google-analytics.swig' %}
+
+  {# random background music #}
+  {% set bgm = ["coin", "jar_of_love", "later", "libai", "sink_in_drama_so_deep", "star_moon", "think_of_ideal", "wont_go_home_without_you", "YoungForYou"] %}
+  <audio autoplay loop src='http://urinx.github.io/music/{{ bgm[_.random(bgm.length-1)] }}.mp3'></audio>
 </body>
 </html>
