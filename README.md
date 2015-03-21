@@ -13,6 +13,10 @@ Homepage
 -----------
 ![urinx](screenshot/v3.png)
 
+Blog
+===
+![blog](screenshot/blog.png)
+
 APP
 ===
 
