@@ -12,7 +12,7 @@
     {% for name, path in theme.menu %}
       {% set itemName = name.toLowerCase() %}
       <li class="menu-item menu-item-{{ itemName }}">
-        <a href="{{ url_for(path) }}">
+        <a href=".{{ url_for(path) }}">
           <i class="menu-item-icon icon-{{ itemName }}"></i> <br />
           {{ __('menu.' + itemName) }}
         </a>
