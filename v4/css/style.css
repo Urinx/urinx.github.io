@@ -20,10 +20,10 @@ video{
 	text-align: center;
 	opacity: 0;
 
-	-moz-transition: all 1s 1s ease;
-	-webkit-transition: all 1s 1s ease;
-	-o-transition: all 1s 1s ease;
-	transition: all 1s 1s ease;
+	-moz-transition: all 1s ease 1s;
+	-webkit-transition: all 1s ease 1s;
+	-o-transition: all 1s ease 1s;
+	transition: all 1s ease 1s;
 }
 .info span{
 	color: rgba(0,0,0,0.8);
@@ -44,5 +44,22 @@ video{
 }
 .move2center{
 	right: 50%;
-	transform: translateX(5em);
+	/*transform: translateX(5em);*/
+}
+img{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	opacity: 0;
+
+	-moz-transition: all 1s ease 2s;
+	-webkit-transition: all 1s ease 2s;
+	-o-transition: all 1s ease 2s;
+	transition: all 1s ease 2s;
+}
+.imgMove{
+	transform: translateX(100px);
+	opacity: 1;
 }
