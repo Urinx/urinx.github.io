@@ -1,0 +1,48 @@
+body{
+	background: #000;
+	overflow: hidden;
+	font-family: 'Helvetica', sans-serif;
+}
+video{
+	border: none;
+	position: absolute;
+}
+.wrapper{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.info{
+	position: absolute;
+	top: 40%;
+	right: 50%;
+	transform: translateX(5em);
+	text-align: center;
+	opacity: 0;
+
+	-moz-transition: all 1s 1s ease;
+	-webkit-transition: all 1s 1s ease;
+	-o-transition: all 1s 1s ease;
+	transition: all 1s 1s ease;
+}
+.info span{
+	color: rgba(0,0,0,0.8);
+	font-size: 5em;
+}
+.info hr{
+	border: none;
+}
+.info a{
+	color: rgba(23,23,23,0.5);
+	font-size: 1em;
+	text-decoration: none;
+	display: block;
+}
+.move2right{
+	right: 20%;
+	opacity: 1;
+}
+.move2center{
+	right: 50%;
+	transform: translateX(5em);
+}

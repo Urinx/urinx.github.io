@@ -1,0 +1,54 @@
+<head>
+	<title>Urinx</title>
+	<meta chatset="utf-8">
+	<meta http-equiv="Cache-control" content="public">
+	<meta name="description" content="Urinx, A web-frontend developer, China | WeChat: google-2 | Email: uri.lqy@gmail.com">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="../libs/ga.js"></script>
+</head>
+
+<body>
+	<video src="Fate_stay_night.mp4"></video>
+	<div class="wrapper">
+		<div class="info">
+			<span>Urinx</span>
+			<hr>
+			<a href="http://github.com/urinx/" target="_blank">@Github</a>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+
+function $(el){
+	return document.querySelector(el);
+}
+
+window.onload = function(){
+	var video = $('video'),
+		div_info = $('.info');
+	if ( window.innerWidth/window.innerHeight >= 1280/720) {
+		video.style.width = '100%';
+	} else {
+		video.style.height = '100%';
+	}
+
+	video.addEventListener('canplaythrough',function(){
+		console.log('Video Play.');
+		video.play();
+		div_info.classList.add('move2right');
+	},false);
+
+	var timer = setInterval(function(){
+		if ( video.duration - video.currentTime < 2) {
+			video.pause();
+			clearTimeout(timer);
+			console.log('Video Paused.');
+			div_info.classList.add('move2center');
+		}
+	},500);
+}
+
+</script>
