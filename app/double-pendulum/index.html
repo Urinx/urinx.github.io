@@ -1,5 +1,6 @@
 <head>
 	<title>Double Pendulum Simulation</title>
+	<meta charset="utf-8">
 	<style type="text/css">
 	* {
 		margin: 0;
@@ -53,6 +54,10 @@
 	<output for="angle2" id="o4">90</output>
 	<br>
 
+	<input type="checkbox" id="c1">轨迹1</input>
+	<input type="checkbox" id="c2" checked>轨迹2</input>
+	<br>
+
 	<button onclick="reset()">Reset</button>
 	<button onclick="start()">Start</button>
 	<button onclick="stop()">Stop</button>
@@ -85,9 +90,10 @@ clearOut1();
 clearOut2();
 
 var xo=w/2;
-var yo=h/3;
+var yo=h/4;
 var g=0.005;
 var tau=3.0;
+var N=1;
 var m1=h/50;
 var m2=h/50;
 var l1=h/3;
@@ -177,26 +183,28 @@ function rk4(z,f1,f2,f3,f4){
 		c=z[2],
 		d=z[3];
 	var K1=[],K2=[],K3=[],K4=[];
-	K1[0]=f1(a,b,c,d)*tau;
-    K1[1]=f2(a,b,c,d)*tau;
-    K1[2]=f3(a,b,c,d)*tau;
-    K1[3]=f4(a,b,c,d)*tau;
-    K2[0]=f1(a+K1[0]/2,b+K1[1]/2,c+K1[2]/2,d+K1[3]/2)*tau;
-    K2[1]=f2(a+K1[0]/2,b+K1[1]/2,c+K1[2]/2,d+K1[3]/2)*tau;
-    K2[2]=f3(a+K1[0]/2,b+K1[1]/2,c+K1[2]/2,d+K1[3]/2)*tau;
-    K2[3]=f4(a+K1[0]/2,b+K1[1]/2,c+K1[2]/2,d+K1[3]/2)*tau;
-    K3[0]=f1(a+K2[0]/2,b+K2[1]/2,c+K2[2]/2,d+K2[3]/2)*tau;
-    K3[1]=f2(a+K2[0]/2,b+K2[1]/2,c+K2[2]/2,d+K2[3]/2)*tau;
-    K3[2]=f3(a+K2[0]/2,b+K2[1]/2,c+K2[2]/2,d+K2[3]/2)*tau;
-    K3[3]=f4(a+K2[0]/2,b+K2[1]/2,c+K2[2]/2,d+K2[3]/2)*tau;
-    K4[0]=f1(a+K3[0],b+K3[1],c+K3[2],d+K3[3])*tau;
-    K4[1]=f2(a+K3[0],b+K3[1],c+K3[2],d+K3[3])*tau;
-    K4[2]=f3(a+K3[0],b+K3[1],c+K3[2],d+K3[3])*tau;
-    K4[3]=f4(a+K3[0],b+K3[1],c+K3[2],d+K3[3])*tau;
-    a=a+(K1[0]+2*K2[0]+2*K3[0]+K4[0])/6;
-    b=b+(K1[1]+2*K2[1]+2*K3[1]+K4[1])/6;
-    c=c+(K1[2]+2*K2[2]+2*K3[2]+K4[2])/6;
-    d=d+(K1[3]+2*K2[3]+2*K3[3]+K4[3])/6;
+	for (var i = 0; i < N; i++) {
+		K1[0]=f1(a,b,c,d)*tau;
+	    K1[1]=f2(a,b,c,d)*tau;
+	    K1[2]=f3(a,b,c,d)*tau;
+	    K1[3]=f4(a,b,c,d)*tau;
+	    K2[0]=f1(a+K1[0]/2,b+K1[1]/2,c+K1[2]/2,d+K1[3]/2)*tau;
+	    K2[1]=f2(a+K1[0]/2,b+K1[1]/2,c+K1[2]/2,d+K1[3]/2)*tau;
+	    K2[2]=f3(a+K1[0]/2,b+K1[1]/2,c+K1[2]/2,d+K1[3]/2)*tau;
+	    K2[3]=f4(a+K1[0]/2,b+K1[1]/2,c+K1[2]/2,d+K1[3]/2)*tau;
+	    K3[0]=f1(a+K2[0]/2,b+K2[1]/2,c+K2[2]/2,d+K2[3]/2)*tau;
+	    K3[1]=f2(a+K2[0]/2,b+K2[1]/2,c+K2[2]/2,d+K2[3]/2)*tau;
+	    K3[2]=f3(a+K2[0]/2,b+K2[1]/2,c+K2[2]/2,d+K2[3]/2)*tau;
+	    K3[3]=f4(a+K2[0]/2,b+K2[1]/2,c+K2[2]/2,d+K2[3]/2)*tau;
+	    K4[0]=f1(a+K3[0],b+K3[1],c+K3[2],d+K3[3])*tau;
+	    K4[1]=f2(a+K3[0],b+K3[1],c+K3[2],d+K3[3])*tau;
+	    K4[2]=f3(a+K3[0],b+K3[1],c+K3[2],d+K3[3])*tau;
+	    K4[3]=f4(a+K3[0],b+K3[1],c+K3[2],d+K3[3])*tau;
+	    a=a+(K1[0]+2*K2[0]+2*K3[0]+K4[0])/6;
+	    b=b+(K1[1]+2*K2[1]+2*K3[1]+K4[1])/6;
+	    c=c+(K1[2]+2*K2[2]+2*K3[2]+K4[2])/6;
+	    d=d+(K1[3]+2*K2[3]+2*K3[3]+K4[3])/6;	
+	}
     return [a,b,c,d];
 }
 
@@ -217,10 +225,10 @@ function get_position(a1,a2){
 	return p;
 }
 
-function DrawDot(posx,posy){
+function DrawDot(posx,posy,color){
   	context2.beginPath();
-    context2.strokeStyle = 'white';
-	context2.fillStyle = 'white';
+    context2.strokeStyle = color;
+	context2.fillStyle = color;
     context2.arc(posx, posy, 1.0, 0, Math.PI*2, false);
     context2.fill();
 }
@@ -270,7 +278,8 @@ function animate(){
 		p=get_position(z[0],z[1]);
 		
 		clearOut1();
-		DrawDot(p[2],p[3]);
+		$('#c1').checked && DrawDot(p[0],p[1],'yellow');
+		$('#c2').checked && DrawDot(p[2],p[3],'white');
 		context.drawImage(canvas2, 0, 0);
 		DrawRod(p);
 		DrawBall(xo,yo,5);
