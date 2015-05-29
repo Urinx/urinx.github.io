@@ -1,0 +1,181 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background: url(../res/bg.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+img{
+	border: none;
+}
+.search{
+	width: 100%;
+	height: 8%;
+	position: absolute;
+	top: 0;
+}
+.app{
+	width: 100%;
+   	height: 82%;
+	position: absolute;
+	top: 50px;
+	overflow: hidden;
+}
+.dock{
+	width: 100%;
+	height: 10%;
+	position: absolute;
+	bottom: 0;
+}
+.dock-container {
+	position: absolute;
+	height: 100%;
+	background: rgba(255,255,255,0.3);
+	padding-left: 20px;
+	border-radius: 8px 8px 0 0;
+
+	-moz-transform: translateX(-10px);
+	-webkit-transform: translateX(-10px);
+	-o-transform: translateX(-10px);
+	-ms-transform: translateX(-10px);
+	transform: translateX(-10px);
+}
+a.dock-item {
+	display: block; 
+	font: 12px Arial, Helvetica, sans-serif;
+	width: 60px;
+	bottom: 0px;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+}
+.dock-item span {
+	display: none;
+	margin-left: 20px;
+	color: black;
+}
+.bubble{
+	display: block;
+	background: rgba(255,255,255,0.8);
+	border-radius: 3px;
+	padding: 5px;
+}
+.bubble:before{
+	content: ' ';
+	position: absolute;
+	top: 24px;
+	left: 55px;
+	width: 0;
+	height: 0;
+	border: 10px solid;
+	border-color: rgba(255,255,255,0.8) transparent transparent transparent;
+}
+.dock-item img {
+	border: none;
+	margin: 5px 10px 0px;
+	width: 100%;
+}
+.app ul.page{
+	list-style: none;
+	width: 300%;
+	height: 90%;
+	position: relative;
+	left: 0;
+}
+.app ul.page li{
+	width: 33.33%;
+	height: 100%;
+	background: transparent;
+	float: left;
+	display: flex;
+}
+.page .app-list{
+	width: 90%;
+	height: 100%;
+	margin: auto;
+}
+a.app-item{
+	display: block; 
+	font: bold 11px Arial, Helvetica, sans-serif;
+	color: white;
+	width: 70px;
+	text-align: center;
+	text-decoration: none;
+	float: left;
+	margin: 10px -moz-calc((100%/7 - 70px)/2);
+   	margin: 10px -webkit-calc((100%/7 - 70px)/2);
+   	margin: 10px calc((100%/7 - 70px)/2);
+}
+.app-item img{
+	border: none;
+	width: 100%;
+}
+.app-item span{}
+.app ul.page-index{
+	list-style: none;
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	vertical-align: center;
+	line-height: 50px;
+	position: absolute;
+}
+ul.page-index li{
+	display: inline-block;
+	background: rgba(255,255,255,0.4);
+	width: 8px;
+	height: 8px;
+	border-radius: 8px;
+	margin: 0 5px;
+}
+.page .app-download{
+	width: 400px;
+	height: 100%;
+	margin: auto;
+	color: white;
+	font: Arial, Helvetica, sans-serif;
+}
+.app-download h1{
+	display: block;
+	width: 100%;
+	height: 150px;
+	text-align: center;
+	line-height: 150px;
+	font-size: 5em;
+}
+.app-download span{
+	display: block;
+	border: 1px solid white;
+	width: 53%;
+	height: auto;
+	font-size: 18px;
+	border-radius: 10px;
+	padding: 15px 20px;
+	margin: auto;
+}
+.app-download img{
+	display: block;
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
+	border: 1px solid white;
+	margin: 10px auto;
+}
+.app-download a{
+	text-decoration: none;
+	display: inline-block;
+	color: rgba(255,255,255,0.8);
+	width: 100px;
+	height: 40px;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	border: 1px solid white;
+	border-radius: 5px;
+	text-align: center;
+	vertical-align: center;
+	margin: 50px 15px 10px 15px;
+}
