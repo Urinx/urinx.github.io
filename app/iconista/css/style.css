@@ -37,14 +37,24 @@ img{
 	position: absolute;
 	top: 50px;
 	overflow: hidden;
-	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 3s ease;
+	   -moz-transition: all 3s ease;
+		-ms-transition: all 3s ease;
+		 -o-transition: all 3s ease;
+		    transition: all 3s ease;
 }
 .dock{
 	width: 100%;
 	height: 10%;
 	position: absolute;
 	bottom: 0;
-	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 3s ease;
+	   -moz-transition: all 3s ease;
+		-ms-transition: all 3s ease;
+		 -o-transition: all 3s ease;
+		    transition: all 3s ease;
 }
 .dock-container {
 	position: absolute;
@@ -125,6 +135,11 @@ a.app-item{
    	margin: 10px -webkit-calc((100%/7 - 70px)/2);
    	margin: 10px calc((100%/7 - 70px)/2);
 }
+a.app-item:hover{
+	-moz-animation: vibrate 0.5s linear infinite;
+	-webkit-animation: vibrate 0.5s linear infinite;
+	animation: vibrate 0.5s linear infinite;
+}
 .app-item img{
 	border: none;
 	width: 100%;
@@ -154,7 +169,7 @@ ul.page-index li{
 	color: white;
 	font: Arial, Helvetica, sans-serif;
 }
-.app-download h1{
+.mobile h1, .app-download h1{
 	display: block;
 	width: 100%;
 	height: 150px;
@@ -162,7 +177,7 @@ ul.page-index li{
 	line-height: 150px;
 	font-size: 5em;
 }
-.app-download span{
+.mobile span, .app-download span{
 	display: block;
 	border: 1px solid white;
 	width: 53%;
@@ -172,7 +187,7 @@ ul.page-index li{
 	padding: 15px 20px;
 	margin: auto;
 }
-.app-download img{
+.mobile img, .app-download img{
 	display: block;
 	width: 80px;
 	height: 80px;
@@ -180,7 +195,7 @@ ul.page-index li{
 	border: 1px solid white;
 	margin: 10px auto;
 }
-.app-download a{
+.mobile a, .app-download a{
 	text-decoration: none;
 	display: inline-block;
 	color: rgba(255,255,255,0.8);
@@ -194,8 +209,106 @@ ul.page-index li{
 	vertical-align: center;
 	margin: 50px 15px 10px 15px;
 }
+.mobile{
+	display: none;
+}
 @media only screen and (max-width: 770px) {
-	.dock, .page-index{
+	.dock, .search, .app{
 		display: none;
 	}
+	.mobile{
+		display: block;
+		opacity: 0;
+		width: 300px;
+		height: 100%;
+		margin: auto;
+
+		-webkit-transition: all 3s ease;
+		-moz-transition: all 3s ease;
+		-ms-transition: all 3s ease;
+		-o-transition: all 3s ease;
+		transition: all 3s ease;
+	}
+}
+
+@-webkit-keyframes vibrate {
+0% {
+	-moz-transform: translate(2px,1px) rotate(5deg);
+	-webkit-transform: translate(2px,1px) rotate(5deg);
+	transform: translate(2px,1px) rotate(5deg);
+}
+25% {
+	-moz-transform: translate(-2px,-1px) rotate(-5deg);
+	-webkit-transform: translate(-2px,-1px) rotate(-5deg);
+	transform: translate(-2px,-1px) rotate(-5deg);
+}
+50% {
+	-moz-transform: translate(2px,1px) rotate(5deg);
+	-webkit-transform: translate(2px,1px) rotate(5deg);
+	transform: translate(2px,1px) rotate(5deg);
+}
+75% {
+	-moz-transform: translate(-2px,-1px) rotate(-5deg);
+	-webkit-transform: translate(-2px,-1px) rotate(-5deg);
+	transform: translate(-2px,-1px) rotate(-5deg);
+}
+100% {
+	-moz-transform: translate(2px,1px) rotate(5deg);
+	-webkit-transform: translate(2px,1px) rotate(5deg);
+	transform: translate(2px,1px) rotate(5deg);
+}
+}
+@-moz-keyframes vibrate {
+0% {
+	-moz-transform: translate(2px,1px) rotate(5deg);
+	-webkit-transform: translate(2px,1px) rotate(5deg);
+	transform: translate(2px,1px) rotate(5deg);
+}
+25% {
+	-moz-transform: translate(-2px,-1px) rotate(-5deg);
+	-webkit-transform: translate(-2px,-1px) rotate(-5deg);
+	transform: translate(-2px,-1px) rotate(-5deg);
+}
+50% {
+	-moz-transform: translate(2px,1px) rotate(5deg);
+	-webkit-transform: translate(2px,1px) rotate(5deg);
+	transform: translate(2px,1px) rotate(5deg);
+}
+75% {
+	-moz-transform: translate(-2px,-1px) rotate(-5deg);
+	-webkit-transform: translate(-2px,-1px) rotate(-5deg);
+	transform: translate(-2px,-1px) rotate(-5deg);
+}
+100% {
+	-moz-transform: translate(2px,1px) rotate(5deg);
+	-webkit-transform: translate(2px,1px) rotate(5deg);
+	transform: translate(2px,1px) rotate(5deg);
+}
+}
+@keyframes vibrate {
+0% {
+	-moz-transform: translate(2px,1px) rotate(5deg);
+	-webkit-transform: translate(2px,1px) rotate(5deg);
+	transform: translate(2px,1px) rotate(5deg);
+}
+25% {
+	-moz-transform: translate(-2px,-1px) rotate(-5deg);
+	-webkit-transform: translate(-2px,-1px) rotate(-5deg);
+	transform: translate(-2px,-1px) rotate(-5deg);
+}
+50% {
+	-moz-transform: translate(2px,1px) rotate(5deg);
+	-webkit-transform: translate(2px,1px) rotate(5deg);
+	transform: translate(2px,1px) rotate(5deg);
+}
+75% {
+	-moz-transform: translate(-2px,-1px) rotate(-5deg);
+	-webkit-transform: translate(-2px,-1px) rotate(-5deg);
+	transform: translate(-2px,-1px) rotate(-5deg);
+}
+100% {
+	-moz-transform: translate(2px,1px) rotate(5deg);
+	-webkit-transform: translate(2px,1px) rotate(5deg);
+	transform: translate(2px,1px) rotate(5deg);
+}
 }

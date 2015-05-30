@@ -27,8 +27,7 @@ function loadimg(arr,funLoading,funOnLoad,funOnError){
 }
 
 $(document).ready(function(){
-	var isMobile = !window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content')=="'desktop'";
-console.log(isMobile),
+	var MQ = window.getComputedStyle(document.querySelector('body'), '::before').getPropertyValue('content').replace(/["']/g, ""),
 		pageIndex=0,
 		maxIndex=$('.page-index li').length-1;
 
@@ -41,12 +40,11 @@ console.log(isMobile),
 		$('.page-index li')[i].style.background='rgba(255,255,255,1)';
 	}
 
-	if (isMobile) {
+	if (MQ == 'mobile') {
 		setTimeout(function(){
 			$('.wrap').css('display','none');
-			curPage(maxIndex);
-			$('.app-download').css('visibility','visible');
-		},10000);
+			$('.mobile').css('opacity','1');
+		},5000);
 	}
 	else {
 		// ==== Preload images =====
@@ -117,8 +115,8 @@ console.log(isMobile),
 			$('.wrap').css('display','none');
 			$('body').css('background','url(res/bg.jpg) no-repeat');
 			$('body').css('background-size','100% 100%');
-			$('.app').css('visibility','visible');
-			$('.dock').css('visibility','visible');
+			$('.app').css('opacity','1');
+			$('.dock').css('opacity','1');
 		},null);
 		// =========================
 
