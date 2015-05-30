@@ -27,7 +27,7 @@ function loadimg(arr,funLoading,funOnLoad,funOnError){
 }
 
 $(document).ready(function(){
-	var isMobile = window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content')=="'mobile'";
+	var isMobile = !window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content')=="'desktop'";
 console.log(isMobile),
 		pageIndex=0,
 		maxIndex=$('.page-index li').length-1;
