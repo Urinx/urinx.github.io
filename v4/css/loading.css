@@ -1,0 +1,98 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-left: -35px;
+  margin-top: -35px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 8px #e8e8e8;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+}
+.loader:after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 4px;
+  height: 10px;
+  margin-left: -2px;
+  background-color: #000000;
+}
+.loader.loader--small {
+  width: 35px;
+  height: 35px;
+  margin-left: -17.5px;
+  margin-top: -17.5px;
+  -webkit-animation: rotate 0.83333s linear infinite;
+          animation: rotate 0.83333s linear infinite;
+}
+.loader.loader--small:after {
+  top: auto;
+  bottom: -8px;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loader-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -35px;
+  margin-top: 35px;
+  color: white;
+}
+
+.dot1 {
+  font-size: 2em;
+  -webkit-animation: dot 2s 0s linear infinite;
+          animation: dot 2s 0s linear infinite;
+}
+.dot2 {
+  font-size: 2em;
+  -webkit-animation: dot 2s 0.5s linear infinite;
+          animation: dot 2s 0.5s linear infinite;
+}
+.dot3 {
+  font-size: 2em;
+  -webkit-animation: dot 2s 1s linear infinite;
+          animation: dot 2s 1s linear infinite;
+}
+
+@-webkit-keyframes dot {
+  5% {
+    opacity: 0;
+  }
+}
+
+@keyframes dot {
+  5% {
+    opacity: 0;
+  }
+}

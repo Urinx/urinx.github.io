@@ -6,10 +6,20 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/loading.css">
 	<script src="../libs/ga.js"></script>
 </head>
 
 <body>
+	<!-- loading... -->
+	<div class="load">
+		<div class="loader"></div>
+		<div class="loader loader--small"></div>
+		<span class="loader-text">loading
+			<span class="dot1">.</span><span class="dot2">.</span><span class="dot3">.</span>
+		</span>
+	</div>
+
 	<video src="Fate_stay_night.mp4"></video>
 	<div class="wrapper">
 		<div class="info">
@@ -29,7 +39,8 @@ function $(el){
 
 window.onload = function(){
 	var video = $('video'),
-		div_info = $('.info');
+		div_info = $('.info'),
+		loader = $('.load');
 	if ( window.innerWidth/window.innerHeight >= 1280/720) {
 		video.style.width = '100%';
 	} else {
@@ -38,6 +49,8 @@ window.onload = function(){
 
 	video.addEventListener('canplaythrough',function(){
 		console.log('Video Play.');
+		video.style.visibility = 'visible';
+		loader.style.display = 'none';
 		video.play();
 		div_info.classList.add('move2right');
 	},false);

@@ -6,6 +6,7 @@ body{
 video{
 	border: none;
 	position: absolute;
+	visibility: hidden;
 }
 .wrapper{
 	position: absolute;
