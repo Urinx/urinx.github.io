@@ -1,0 +1,16 @@
+.icon{
+	font-family:fontawesome;
+	font-weight:bold;
+	font-size:10px;
+}
+.goal,.completed{
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+	fill:white;
+	text-anchor:middle;
+}
+.goal{
+	font-size: 30px;
+}
+.completed{
+	font-size: 95px;
+}
