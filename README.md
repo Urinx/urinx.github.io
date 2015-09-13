@@ -56,3 +56,16 @@ APP
 [Moi - 天気予報](http://urinx.github.io/app/moi/)
 ------------
 ![Moi - 天気予報](screenshot/Moi.png)
+
+[唯舞 - 街舞视频](https://github.com/Urinx/Vu)
+------------
+![唯舞 - 街舞视频](screenshot/vu.png)
+
+[微信运动刷榜神器 (已删)]()
+------------
+![微信运动刷榜神器](screenshot/weixinwalk.png)
+
+[WriteTyper](http://urinx.github.io/app/writetyper/)
+------------
+![WriteTyper](screenshot/writetyper.png)
+
