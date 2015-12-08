@@ -75,6 +75,18 @@ var works = [
 ];
 var articles = [
 	{
+		'title': '水窗春呓 —— Floid 原型设计工具',
+		'link': 'http://www.jianshu.com/p/4b9a3b6d28db',
+		'img': 'img/Floid.png',
+		'description': '本文乃Floid入门篇，以示例传授此物基本使用之法，或曰，何以精通，无他，久自工。其间卑辞俚语，不揣浅陋，博一笑尔。',
+	},
+	{
+		'title': '负暄闲语 —— 取证一二事',
+		'link': 'http://www.jianshu.com/p/feef8fe9b8b5',
+		'img': 'http://upload-images.jianshu.io/upload_images/266748-8ceb060ab5c50bcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
+		'description': '那日，我拾起散落一地的泛黄笔记，未曾想到会从一个尘封已久的盒子里翻出锈迹斑斑的硬盘。我只记得，当时，夕阳满满的打在脸颊上，而眼前的硬盘还在闪闪发光，似乎在述说着一个不可告人的秘密。',
+	},
+	{
 		'title': 'Sketch！一次悸动的小逆向尝试',
 		'link': 'http://www.jianshu.com/p/9a1d4924103e',
 		'img': 'http://upload-images.jianshu.io/upload_images/266748-83d9e9f013df5c7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
