@@ -1,5 +1,12 @@
 var works = [
 	{
+		'title': 'Lifeline SilentNight',
+		'subTitle': '生命线：静夜 on Telegram',
+		'github': 'https://github.com/Urinx/Lifeline_SilentNight',
+		'img': 'img/lifeline.png',
+		'description': 'Lifeline: SilentNight is now available on Telegram and terminal. You can experience a tense psychological thriller and save Taylor from the green aliens just as same as its on iOS or Android.',
+	},
+	{
 		'title': 'WriteTyper',
 		'subTitle': '復古打字機 — Mac OS X App',
 		'website': 'http://urinx.github.io/app/writetyper',
@@ -74,6 +81,12 @@ var works = [
 	},
 ];
 var articles = [
+	{
+		'title': '生命线：静夜 on Telegram',
+		'link': 'http://www.jianshu.com/p/5a480d2d5dc6',
+		'img': 'http://upload-images.jianshu.io/upload_images/266748-c06542ab543f23f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
+		'description': '只要在telegram上搜索@LifelineSilentNightBot并添加就可以跟泰勒对话了。支持六国语言，泰勒也会说日语。',
+	},
 	{
 		'title': '水窗春呓 —— Floid 原型设计工具',
 		'link': 'http://www.jianshu.com/p/4b9a3b6d28db',
@@ -178,9 +191,9 @@ var articles = [
 	},
 ];
 
-var works_row = 3,
+var works_row = 4,
 	works_col = 3,
-	articles_row = 5,
+	articles_row = 6,
 	articles_col = 3;
 
 var work_template = '\
