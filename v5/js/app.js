@@ -1,5 +1,26 @@
 var works = [
 	{
+		'title': 'iOSAppHook',
+		'subTitle': '非越狱环境下iOS应用逆向',
+		'github': 'https://github.com/Urinx/iOSAppHook',
+		'img': 'img/reveal.png',
+		'description': '专注于非越狱环境下iOS应用逆向研究，从dylib注入，应用重签名到App Hook',
+	},
+	{
+		'title': 'SublimeCode',
+		'subTitle': '一个代码阅读应用 - iOS',
+		'github': 'https://github.com/Urinx/SublimeCode',
+		'img': 'img/sublime.png',
+		'description': '一个代码阅读应用 - iOS',
+	},
+	{
+		'title': 'WeixinBot',
+		'subTitle': '网页版微信API，包含终端版微信及微信机器人',
+		'github': 'https://github.com/Urinx/WeixinBot',
+		'img': 'img/weixinbot.jpg',
+		'description': '网页版微信API，包含终端版微信及微信机器人',
+	},
+	{
 		'title': 'Lifeline SilentNight',
 		'subTitle': '生命线：静夜 on Telegram',
 		'github': 'https://github.com/Urinx/Lifeline_SilentNight',
@@ -40,7 +61,7 @@ var works = [
 		'subTitle': 'Mac主题图标美化工具',
 		'website': 'http://urinx.github.io/app/iconista/',
 		'github': 'https://github.com/Urinx/Iconista',
-		'img': 'https://mmbiz.qlogo.cn/mmbiz/icv3Y2jicj1r59NVePQypWtyqQ1oqM5IfZM2PvWiarGZE1M8kkUISvMIs32Sialib7sGzTw8TP2cafQ0VtLlcqa8BiaQ/0?wx_fmt=jpeg',
+		'img': 'img/iconista.png',
 		'description': "It's easy, save, and fast tool that helps you to change your Mac Os X default applications icon, for it looks like horrible and ugly.",
 	},
 	{
@@ -82,9 +103,21 @@ var works = [
 ];
 var articles = [
 	{
+		'title': '非越狱环境下从应用重签名到微信上加载Cycript',
+		'link': 'http://www.jianshu.com/p/262b9849fa10',
+		'img': 'img/article10.png',
+		'description': '从零到一，非越狱环境下iOS应用逆向研究，从dylib注入，应用重签名到App Hook。文中用到的工具和编译好的dylib可在Github上下载。',
+	},
+	{
+		'title': 'Sublime Code，一个你最需要的代码阅读应用',
+		'link': 'http://www.jianshu.com/p/da0e480d5c0b',
+		'img': 'img/sublime.png',
+		'description': '记得是那天晚上，我又一次的失眠了，与外界的安逸不同，内心的躁动让我辗转反侧。掏出手机，微信上各种小红点以及庞大的信息流让人无所适从，夜深人静的时候，有时你会发现，莫名的，自己突然想看看代码了。',
+	},
+	{
 		'title': '生命线：静夜 on Telegram',
 		'link': 'http://www.jianshu.com/p/5a480d2d5dc6',
-		'img': 'http://upload-images.jianshu.io/upload_images/266748-c06542ab543f23f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
+		'img': 'img/lifeline2.png',
 		'description': '只要在telegram上搜索@LifelineSilentNightBot并添加就可以跟泰勒对话了。支持六国语言，泰勒也会说日语。',
 	},
 	{
@@ -96,55 +129,55 @@ var articles = [
 	{
 		'title': '负暄闲语 —— 取证一二事',
 		'link': 'http://www.jianshu.com/p/feef8fe9b8b5',
-		'img': 'http://upload-images.jianshu.io/upload_images/266748-8ceb060ab5c50bcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
+		'img': 'img/article1.png',
 		'description': '那日，我拾起散落一地的泛黄笔记，未曾想到会从一个尘封已久的盒子里翻出锈迹斑斑的硬盘。我只记得，当时，夕阳满满的打在脸颊上，而眼前的硬盘还在闪闪发光，似乎在述说着一个不可告人的秘密。',
 	},
 	{
 		'title': 'Sketch！一次悸动的小逆向尝试',
 		'link': 'http://www.jianshu.com/p/9a1d4924103e',
-		'img': 'http://upload-images.jianshu.io/upload_images/266748-83d9e9f013df5c7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
+		'img': 'img/sketch.png',
 		'description': '因为最近刚看完了一些iOS逆向开发的书，奈何没有越狱的设备，只好在OS X上练练手。',
 	},
 	{
 		'title': 'Github Hacking',
 		'link': 'http://www.jianshu.com/p/d6b54f1d60f1',
-		'img': 'http://upload-images.jianshu.io/upload_images/266748-b5c36895ec28fcae.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
+		'img': 'img/github.jpg',
 		'description': 'Github不仅能托管代码，还能对代码进行搜索，我们感受到了其便利的同时，也应该时刻注意，当你上传并公开你的代码时，一时大意，让某些敏感的配置信息文件等暴露于众。',
 	},
 	{
 		'title': 'WriteTyper - 在Mac上體驗舊式打字機的觸感',
 		'link': 'http://www.jianshu.com/p/993c1dd06901',
-		'img': 'https://mmbiz.qlogo.cn/mmbiz/icv3Y2jicj1r4j8JRDiceemEDCnjxlcCSmVK8Oibl96PgMfcF1OibXN9rOKzWPzcib5VWX3FQUVNvPEkgL7cHr8JFBlg/0?wx_fmt=jpeg',
+		'img': 'https://github.com/Urinx/WriteTyper/raw/master/screenshot/home.png',
 		'description': '不加点世事难料，调不出生活的味道。',
 	},
 	{
 		'title': '再谈微信运动',
 		'link': 'http://www.jianshu.com/p/0fe7b5543806',
-		'img': 'https://mmbiz.qlogo.cn/mmbiz/icv3Y2jicj1r6vHMHUz98lwTIwxiaxaKoCmaUHMABJPao3G03QwdyhIl0IcQfRpZfvK0vnLggY3tvIICdQLxZicdyQ/0?wx_fmt=jpeg',
+		'img': 'img/article2.jpeg',
 		'description': '现在对自己的健康作弊，最后伤害的还是自己，运动不在于多少，在于问心无愧，每天多走一步，用真实的数据说话。',
 	},
 	{
 		'title': '微信运动刷榜神器',
 		'link': 'http://mp.weixin.qq.com/s?__biz=MzA3MjAzMTgyMA==&mid=209449871&idx=1&sn=06bbca9da7b6989faf7d61a97819910c#rd',
-		'img': 'http://mmbiz.qpic.cn/mmbiz/icv3Y2jicj1r7NB4gAgRY451vsiaV92B4EChUUXGvtRkwCmgKvYe3lX1AibTRJFG1weDZcCzR4FgvKQybicaGNicj3jQ/640?wx_fmt=jpeg&wxfrom=5',
+		'img': 'img/article4.jpeg',
 		'description': '哎哟妈啊，我再也不跟你们这群小伙伴比走路了',
 	},
 	{
 		'title': '唯舞 - 街舞视频',
 		'link': 'http://www.jianshu.com/p/7f939715cbfe',
-		'img': 'http://upload-images.jianshu.io/upload_images/266748-e62bab68debca5f4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
+		'img': 'img/vu.jpg',
 		'description': '小人常足不出户，虽闲情寡欲，但尤好赏舞，子曰：唯舞独尊。若于街市中观舞，余自幼体弱多病，出门远行，累觉不爱。幸有一网站，名之唯舞，上有万千视频多不胜数随君把玩，卧榻倚床，每有会意便欣然忘食，不亦乐乎。然每访其网站，观其视频，日久天长，实感不便矣。久寻客户端不得，怅然不知所以，遂做此软体，方便自己，亦益于他人。以上。',
 	},
 	{
 		'title': 'Iconista首页背后的故事',
 		'link': 'http://www.jianshu.com/p/60b4c165672a#rd',
-		'img': 'https://mmbiz.qlogo.cn/mmbiz/icv3Y2jicj1r59NVePQypWtyqQ1oqM5IfZM2PvWiarGZE1M8kkUISvMIs32Sialib7sGzTw8TP2cafQ0VtLlcqa8BiaQ/0?wx_fmt=jpeg',
+		'img': 'img/iconista2.png',
 		'description': '安静的图书馆<br>电台广播传来熟悉的旋律<br>——“当时有多少心愿，就有多少的残缺”<br>忽然一阵悸动<br>在这个离别的六月季，听着五月天',
 	},
 	{
 		'title': 'Iconista——Mac下最炫酷的主题图标美化工具',
 		'link': 'http://www.jianshu.com/p/fd4d358b2aaa#rd',
-		'img': 'https://mmbiz.qlogo.cn/mmbiz/icv3Y2jicj1r7adzYd4aVnmXVicwhAn1iaYLyTPSe5VCyRTPzrg9NPuIY1EhlsME4XgmUG21TaZic8ibTNtdO3kKk6oQ/0?wx_fmt=jpeg',
+		'img': 'img/iconista.png',
 		'description': '总想着长大了的以后，<br>再来弥补以前的六一',
 	},
 	{
@@ -156,13 +189,13 @@ var articles = [
 	{
 		'title': 'VPN桥梁动力学',
 		'link': 'https://github.com/Urinx/SomeCodes/blob/master/Articles/Weekly%20Bullshit/2015.4.9/README.md#rd?sukey=fc78a68049a14bb2a7d452b2fa5a1e900cbafb91f2ab25da2695698b4c050bfead90b7c2d62536b75c8491df99f69cac',
-		'img': 'https://mmbiz.qlogo.cn/mmbiz/icv3Y2jicj1r5xPOCpGwKHOFyh1s7gCKmLEYchjmW3bDERyD5oicEjemTLZkibibUyYNObcRGuPe9TQLbd7yvTs7ZuQ/0',
+		'img': 'img/article5.jpeg',
 		'description': '曾经，我把你的身影，放进窗口，定格为风景；<br>放牧思想，浅笔静开，梦与痴，笑与泪，便于悄然中呢喃一怀沉香。',
 	},
 	{
 		'title': '聊聊 Web Components 组件化开发',
 		'link': 'https://github.com/Urinx/SomeCodes/blob/master/Web/shadowDOM.demo/demo/README.md#rd?sukey=fc78a68049a14bb25637b760fdeddf744fa0c717fffb6292d8b8aa50eea423e88de1174342d989eeb5e32f30fbae7a97',
-		'img': 'https://mmbiz.qlogo.cn/mmbiz/icv3Y2jicj1r4u5ZJ6HPc2LzHHptY27uC4rZTN2ABNwEBQVjbbSynG2phAZhV9XQaC4jF5C7tc6u4CYm4A1TW0xw/0',
+		'img': 'img/personalcard.png',
 		'description': '假使哪日你刹那迷踪不明，我亦曾对你有过一场动情。',
 	},
 	{
@@ -174,7 +207,7 @@ var articles = [
 	{
 		'title': '浅析Chrome保存的密码为啥可以随便看',
 		'link': 'https://github.com/Urinx/Psychic-meme/#rd?sukey=fc78a68049a14bb286a25bdadf25d66a348645016ac1f3a4c193fb91e64a7b7b73cd105194739c35d9a0cbc76a128098',
-		'img': 'https://mmbiz.qlogo.cn/mmbiz/icv3Y2jicj1r6dtsgByJdHOSpEvdWjIX1IwoPIbLmAcAj9cZapv6q4wYLNgCZMasBLHQx9XHmQxZr5Wl32SXuWSw/0',
+		'img': 'img/article7.jpeg',
 		'description': '执着于理想，纯粹于当下。人生无处不飞花。',
 	},
 	{
@@ -186,7 +219,7 @@ var articles = [
 	{
 		'title': '那天，我用青光眼看美剧《天蝎》',
 		'link': 'https://github.com/Urinx/SomeCodes/tree/master/Python/GaussianFilter#rd?sukey=fc78a68049a14bb2028d098012f6c908d81e623577c58383f746419e1d24e507971615a91f2f7fdd0965695ad4f0623f',
-		'img': 'https://mmbiz.qlogo.cn/mmbiz/icv3Y2jicj1r5sZVoGctHcdgAyN5QVwicfJ0xIiaHr0Lk4ictWAAazSicfFtkxluA9MnGaaIgGAzagLr8UkvRBLzrtpQ/0',
+		'img': 'img/article9.jpeg',
 		'description': '前言：每周二更新的《天蝎》，作为一部备受好评的秋季档神剧，第一集的横空出世确实表现不错，令人眼前一亮，奈何后劲不足。。只见满屏幕在闪，手速跟不上码速。',
 	},
 ];
